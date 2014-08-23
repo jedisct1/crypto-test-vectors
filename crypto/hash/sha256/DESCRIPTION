@@ -1,0 +1,9 @@
+
+SHA256 hash function
+
+- 333333 entries generated on Charpie using generators/hashlib - no seed
+- 333333 entries generated on Charpie using generators/libsodium - no seed
+- 333334 entries generated on Charpie using generators/php - no seed
+
+Hardware and operating system:
+- Charpie: Intel Core i7, OSX 10.10

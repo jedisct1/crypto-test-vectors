@@ -1,0 +1,7 @@
+<message> <tab> <key> <tab> <output length> <tab> <output>
+
+<message> length range: [0, 256]
+
+<key> length range: [0, 64]
+
+<output legnth> range: [1, 64]
