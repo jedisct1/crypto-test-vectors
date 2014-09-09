@@ -28,7 +28,7 @@ generate(void)
     assert(MAX_KEY_LENGTH <= crypto_generichash_blake2b_KEYBYTES_MAX);
     assert(MAX_OUTPUT_LENGTH <= crypto_generichash_blake2b_BYTES_MAX);
     randombytes_buf(salt, sizeof salt);
-    randombytes_buf(personal, sizeof personal);    
+    randombytes_buf(personal, sizeof personal);
     message_len = randombytes_uniform(MAX_MESSAGE_LENGTH + 1U);
     randombytes_buf(message, message_len);
     key_len =
