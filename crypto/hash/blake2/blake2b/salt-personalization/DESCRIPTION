@@ -1,0 +1,8 @@
+
+Blake2b hash function with salt and personalization
+
+- 500000 entries generated on Charpie using generators/pyblake2 - no seed
+- 500000 entries generated on Charpie using generators/libsodium - no seed
+
+Hardware and operating system:
+- Charpie: Intel Core i7, OSX 10.10

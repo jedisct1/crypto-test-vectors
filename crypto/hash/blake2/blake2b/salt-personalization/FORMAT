@@ -1,0 +1,11 @@
+<message> <tab> <key> <tab> <salt> <tab> <personalization> <tab> <output length> <tab> <output>
+
+<message> length range: [0, 256]
+
+<key> length range: [0, 64]
+
+<salt>: 16 bytes
+
+<personalization>: 16 bytes
+
+<output legnth> range: [1, 64]
