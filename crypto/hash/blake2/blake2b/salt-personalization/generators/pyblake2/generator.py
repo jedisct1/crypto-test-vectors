@@ -20,7 +20,11 @@ def generate():
         salt = os.urandom(SALT_LENGTH)
         personal = os.urandom(PERSONAL_LENGTH)
         outLen = int(random.uniform(1, MAX_OUTPUT_LENGTH + 1))
-        out = blake2b(data = message, key = key, digest_size = outLen, salt = salt, person = personal)
+        if key:
+            out = blake2b(data = message, key = key, digest_size = outLen, salt = salt, person = personal)
+        else:
+            out = blake2b(data = message, digest_size = outLen, salt = salt, person = personal)
+
         print("%s\t%s\t%s\t%s\t%u\t%s" % (binascii.hexlify(message), binascii.hexlify(key), binascii.hexlify(salt), binascii.hexlify(personal), outLen, out.hexdigest()))
 
 count = int(sys.argv[1])

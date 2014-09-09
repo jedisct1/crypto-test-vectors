@@ -16,7 +16,11 @@ def generate():
         keyLen = int(random.uniform(0, MAX_KEY_LENGTH + 1))
         key = os.urandom(keyLen)
         outLen = int(random.uniform(1, MAX_OUTPUT_LENGTH + 1))
-        out = blake2b(data = message, key = key, digest_size = outLen)
+        if key:
+            out = blake2b(data = message, key = key, digest_size = outLen)
+        else:
+            out = blake2b(data = message, digest_size = outLen)
+
         print("%s\t%s\t%u\t%s" % (binascii.hexlify(message), binascii.hexlify(key), outLen, out.hexdigest()))
 
 count = int(sys.argv[1])
