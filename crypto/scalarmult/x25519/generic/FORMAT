@@ -1,0 +1,7 @@
+<scalar> <tab> <ge> <tab> <output>
+
+<scalar>: 32 bytes scalar
+
+<ge>: group element represented as 32 bytes
+
+<output>: 32 bytes output

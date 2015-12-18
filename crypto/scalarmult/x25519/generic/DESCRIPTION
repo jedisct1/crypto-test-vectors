@@ -1,5 +1,5 @@
 
-X25519 scalar multiplication of the base point
+X25519 scalar multiplication
 
 - 500000 entries generated on Charpie using generators/libsodium
 
