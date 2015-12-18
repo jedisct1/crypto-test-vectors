@@ -32,6 +32,9 @@ main(int argc, char *argv[])
     if (argc < 2) {
         return 1;
     }
+    if (sodium_init() != 0) {
+        return 1;
+    }
     count = strtoul(argv[1], NULL, 10);
     while (count-- > 0UL) {
         generate();
