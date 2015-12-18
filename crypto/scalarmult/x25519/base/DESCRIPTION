@@ -1,0 +1,7 @@
+
+X25519 scalar multiplication
+
+- 500000 entries generated on Charpie using generators/libsodium
+
+Hardware and operating system:
+- Charpie: Intel Core i7, OSX 10.11
