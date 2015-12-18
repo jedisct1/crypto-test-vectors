@@ -5,4 +5,5 @@ Blake2b hash function without salt/personalization
 - 500000 entries generated on Charpie using generators/libsodium - no seed
 
 Hardware and operating system:
-- Charpie: Intel Core i7, OSX 10.10
+- Charpie: Intel Core i7, OSX 10.11
+
