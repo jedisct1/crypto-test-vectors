@@ -1,5 +1,8 @@
 #ifndef TWEETNACL_H
 #define TWEETNACL_H
+
+#include <stddef.h>
+
 #define crypto_auth_PRIMITIVE "hmacsha512256"
 #define crypto_auth crypto_auth_hmacsha512256
 #define crypto_auth_verify crypto_auth_hmacsha512256_verify
@@ -269,4 +272,9 @@ extern int crypto_verify_32_tweet(const unsigned char *,const unsigned char *);
 #define crypto_verify_32_BYTES crypto_verify_32_tweet_BYTES
 #define crypto_verify_32_VERSION crypto_verify_32_tweet_VERSION
 #define crypto_verify_32_IMPLEMENTATION "crypto_verify/32/tweet"
+
+void randombytes(unsigned char *, unsigned long long);
+char * bin2hex(char * const hex, const size_t hex_maxlen,
+               const unsigned char * const bin, const size_t bin_len);
+
 #endif
