@@ -1,0 +1,7 @@
+<message> <tab> <sk> <tab> <output>
+
+<message>: length range: [0, 256]
+
+<sk>: 32 bytes secret key, properly masked
+
+<output>: 32 bytes signature

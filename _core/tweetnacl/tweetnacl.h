@@ -273,7 +273,10 @@ extern int crypto_verify_32_tweet(const unsigned char *,const unsigned char *);
 #define crypto_verify_32_VERSION crypto_verify_32_tweet_VERSION
 #define crypto_verify_32_IMPLEMENTATION "crypto_verify/32/tweet"
 
+#define randombytes_buf randombytes
 void randombytes(unsigned char *, unsigned long long);
+uint32_t randombytes_uniform(const uint32_t upper_bound);
+uint32_t randombytes_random(void);
 char * bin2hex(char * const hex, const size_t hex_maxlen,
                const unsigned char * const bin, const size_t bin_len);
 

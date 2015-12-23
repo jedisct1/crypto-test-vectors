@@ -1,0 +1,8 @@
+
+Ed25519 signatures
+
+- 500000 entries generated on Charpie using generators/libsodium
+- 500000 entries generated on Charpie using generators/tweetnacl
+
+Hardware and operating system:
+- Charpie: Intel Core i7, OSX 10.11

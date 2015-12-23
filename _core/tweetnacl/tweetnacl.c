@@ -28,6 +28,32 @@ randombytes(unsigned char * const buf, const unsigned long long buf_len)
     increment(randombytes_n);
 }
 
+uint32_t
+randombytes_random(void)
+{
+    uint32_t out;
+
+    randombytes_buf((void *) &out, sizeof out);
+    return out;
+}
+
+uint32_t
+randombytes_uniform(const uint32_t upper_bound)
+{
+    uint32_t min;
+    uint32_t r;
+
+    if (upper_bound < 2) {
+        return 0;
+    }
+    min = (uint32_t) (-upper_bound % upper_bound);
+    do {
+        r = randombytes_random();
+    } while (r < min);
+
+    return r % upper_bound;
+}
+
 char *
 bin2hex(char * const hex, const size_t hex_maxlen,
         const unsigned char * const bin, const size_t bin_len)
